@@ -147,10 +147,10 @@ func main() {
 			}
 			EditFinalImage(fmt.Sprintf("%s.png", "city"), title)
 
-			// err = exec.Command("/usr/local/bin/python3", "fbpost.py", city).Run()
-			// if err != nil {
-			// 	fmt.Println("fucking error", err)
-			// }
+			err = exec.Command("/usr/local/bin/python3", "fbpost.py", city).Run()
+			if err != nil {
+				fmt.Println("fucking error", err)
+			}
 
 			if city == "kathmandu" {
 				time.Sleep(time.Second * 60)
@@ -161,7 +161,7 @@ func main() {
 			}
 			time.Sleep(time.Second * 30)
 		}
-		// time.Sleep(time.Minute * 10)
+		time.Sleep(time.Minute * 10)
 	}
 
 }
